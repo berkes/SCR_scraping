@@ -52,3 +52,31 @@ Van simpel tot complex.
 * Iets wat de boel ophaalt
 * Iets wat de boel parsed
 * Iets wat daaruit informatie haalt
+
+## Ophalen
+
+Alles wat HTTP kent of kan.
+
+* Mirroren: voordeel: eenmalig. nadeel: diskruimte.
+
+## Parsen
+
+* XPATH
+* CSS selectors
+
+* Goede HTML (bijna nooit)
+* HTML parsers nodig
+
+* Selector vinden en debuggen met developer tools.
+* Addons of volledige IDEs om dit te vereenvoudigen.
+
+## Xpath en CSS selectors
+
+* Xpath is erg compleet. Kan bijna alles
+* CSS selectors zijn eenvoudiger maar ingwikkelder dingen zijn meteen heel moeilijk.
+
+* Balanceeract tussen fragiel en robuust
+
+## xselectors
+
+![Demo](./demo.gif)
