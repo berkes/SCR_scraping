@@ -6,21 +6,34 @@ commands=(
 "curl -s https://nos.nl/weer | html2text -utf8 | awk '/Weerbericht/,/Weerfoto/'"
 )
 
+index=0
+
 # Loop through the commands
-for cmd in "${commands[@]}"; do
+while [ $index -lt ${#commands[@]} ]; do
     # Display the command
-    echo "Command: $cmd"
+    echo -e "\e[1mCommand:\e[0m ${commands[$index]}"
     
     # Ask for user input
-    read -p "Run it? (Y/N): " choice
+    read -p "Run it? (Y/N/P for previous): " choice
     
     # Check the choice
     if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
         # Execute the command
-        eval "$cmd"
+        eval "${commands[$index]}"
+        ((index++)) # Move to the next command
     elif [ "$choice" == "N" ] || [ "$choice" == "n" ]; then
-        echo "Skipping command: $cmd"
+        echo "Skipping command: ${commands[$index]}"
+        ((index++)) # Move to the next command
+    elif [ "$choice" == "P" ] || [ "$choice" == "p" ]; then
+        if [ $index -gt 0 ]; then
+            ((index--)) # Go back to the previous command
+        else
+            echo "Already at the beginning."
+        fi
     else
-        echo "Invalid choice, skipping command: $cmd"
+        echo "Invalid choice, please enter Y, N, or P."
     fi
+
+    # Add a new line and a visual separator
+    echo -e "\n----------------------------------------\n"
 done
