@@ -2,7 +2,8 @@
 
 # Define an array of commands to execute
 commands=(
-"curl -s nu.nl/verkeer" 
+"curl -s https://nos.nl/weer | grep regen"
+"curl -s https://nos.nl/weer | html2text -utf8 | awk '/Weerbericht/,/Weerfoto/'"
 )
 
 # Loop through the commands
