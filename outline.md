@@ -23,9 +23,29 @@ Van simpel tot complex.
 * Mirror - Als spider, maar bewaar de HTML en assets lokaal.
 * Schrijf een gespecialiseerde scraper.
 
-## CURL
+## cURL
 
 ![Demo](./demo.gif)
+
+## cURL
+
+* Kan alleen maar dingen ophalen
+* Kan heel veel HTTP dingen: van headers tot obscure features
+* Snapt HTML niet
+* Overal beschikbaar
+* Kent bijna alle protocollen, niet alleen HTTP(s)
+
+## wget
+
+![Demo](./demo.gif)
+
+## wget
+
+* Kent enkel WWW en HTTP(s)
+* Heeft HTTP(s) features zoals redirects volgen
+* Snapt HTML een beetje
+* Heeft opties om links te volgen
+* Kan een site mirroren
 
 ## Onderdelen
 
