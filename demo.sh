@@ -12,6 +12,7 @@ commands=(
 'cd lugn && pipenv run scrapy crawl speakers --loglevel INFO --output ../data/speakers.json && cd -'
 'cat ./lugn/lugn/spiders/speakers.py'
 "< ./data/speakers.json| jq -r '.[].presenters[]'  | sort | uniq -c | sort -h -r"
+"yarn run run"
 )
 
 index=0

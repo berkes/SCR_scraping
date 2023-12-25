@@ -117,10 +117,30 @@ Alles wat HTTP kent of kan.
 
 ![Demo](./demo.gif)
 
+## Scrapy
+
+* Parrallel
+* Tooling: Logging, debugging, scheduling etc.
+* Meerdere spiders in één project beheren
+* ETL functies (naar database wegschrijven etc)
+
+## Voorbeeld Puppetteer
+
+![Demo](./demo.gif)
+
+## Puppetteer
+
+* Eén voorbeeld van een full browser
+* Headless (headfull voor debugging)
+* Interactie DSL
+* Geen scraping framework
+* Scrapy kan ook headless browser
+
 ## Samengevat
 
 * cURL of wget voor simpele requests
 * Scrapy voor complexere taken
+* Headless browser voor dynamische content
 
 ## Pres
 
