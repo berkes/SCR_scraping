@@ -2,7 +2,8 @@
 
 # Define an array of commands to execute
 commands=(
-"curl -s https://nos.nl/weer | grep regen"
+'curl -s https://nos.nl/weer | grep -q regen && echo "JA het regent!" || echo "NEE het regent niet!"'
+'curl -s https://nos.nl/weer | grep regen'
 "curl -s https://nos.nl/weer | html2text -utf8 | awk '/Weerbericht/,/Weerfoto/'"
 "wget --directory-prefix /tmp/ --spider --recursive --level 1 https://linuxnijmegen.nl/"
 "wget --mirror --convert-links --adjust-extension --no-parent --directory-prefix=./data https://linuxnijmegen.nl/"
