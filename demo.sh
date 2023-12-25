@@ -18,7 +18,7 @@ while [ $index -lt ${#commands[@]} ]; do
     echo -e "\e[1mCommand:\e[0m ${commands[$index]}"
     
     # Ask for user input
-    read -p "Run it? (Y/N/P for previous): " choice
+    read -p "Run it? [Y]es, [N]o, [P]revious, [I]nformation: " choice
     
     # Check the choice
     if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
@@ -34,6 +34,10 @@ while [ $index -lt ${#commands[@]} ]; do
         else
             echo "Already at the beginning."
         fi
+    elif [ "$choice" == "I" ] || [ "$choice" == "i" ]; then
+      # Open explainshell in Firefox with the encoded command
+      encoded_cmd=$(echo -n "${commands[$index]}" | jq -s -R -r @uri)
+      firefox "https://explainshell.com/explain?cmd=$encoded_cmd"
     else
         echo "Invalid choice, please enter Y, N, or P."
     fi
