@@ -1,0 +1,15 @@
+{
+  "name": "SCR_scraping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:berkes/SCR_scraping.git",
+  "author": "Bèr Kessels <ber@berk.es>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  },
+  "type": "module",
+  "scripts": {
+    "run": "node puppeteer.js"
+  }
+}
