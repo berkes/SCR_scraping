@@ -9,6 +9,9 @@ commands=(
 "wget --mirror --convert-links --adjust-extension --no-parent --directory-prefix=./data https://linuxnijmegen.nl/"
 "rg 'Presentatie door: ' ./data/linuxnijmegen.nl/onderwerpen/ | html2text -utf8 | grep 'Presentatie door: ' | cut -d : -f2 | sort | uniq -c | sort -h -r"
 'cat ./data/linuxnijmegen.nl/onderwerpen/*.html | hxnormalize -x | hxselect -s "\n" -c "div.uk-panel:nth-child(2)"'
+'cd lugn && pipenv run scrapy crawl speakers --loglevel INFO --output ../data/speakers.json && cd -'
+'cat ./lugn/lugn/spiders/speakers.py'
+"< ./data/speakers.json| jq -r '.[].presenters[]'  | sort | uniq -c | sort -h -r"
 )
 
 index=0

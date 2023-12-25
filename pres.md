@@ -115,8 +115,4 @@ Alles wat HTTP kent of kan.
 
 ## Voorbeeld Scrapy
 
-Vim
-
-## Scrapy demo
-
 ![Demo](./demo.gif)
