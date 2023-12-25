@@ -103,7 +103,7 @@ Alles wat HTTP kent of kan.
 
 * Balanceeract tussen fragiel en robuust
 
-## xselectors
+## Selectors
 
 ![Demo](./demo.gif)
 
@@ -116,3 +116,12 @@ Alles wat HTTP kent of kan.
 ## Voorbeeld Scrapy
 
 ![Demo](./demo.gif)
+
+## Samengevat
+
+* cURL of wget voor simpele requests
+* Scrapy voor complexere taken
+
+## Pres
+
+* [berk.es/scraping](https://berk.es/scraping)
